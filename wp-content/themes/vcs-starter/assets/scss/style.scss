@@ -1,0 +1,854 @@
+$borderBg: #9a9a9a;
+$windowsBgLines: #52e5ab;
+$textColor: #373737;
+$divBgColor: #f3f6f9;
+$percentLineInside: #ebebeb;
+$whiteColor: #ffffff;
+$footerColor: #000000;
+$mainFont: 'Open Sans', sans-serif;
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	// border: 1px solid red;
+}
+
+html {
+	font-size: 16px;
+	font-family: $mainFont;
+}
+
+ul,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	max-width: 1140px;
+	margin: 0 auto;
+}
+
+.flex-container {
+	display: flex;
+}
+
+.hero {
+	background-image: url(../images/compressed/hero.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.overlay {
+	background-color: rgba(255, 255, 255, 0.94);
+}
+
+.hero .container {
+	min-height: 100vh;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	color: $textColor;
+}
+
+.hero-content h1 {
+	font-size: 4.5rem;
+	margin: 0;
+	font-weight: 900;
+	font-family: 'Roboto Slab', serif;
+}
+
+.hero-content h3 {
+	font-size: 1.125rem;
+	font-weight: 400;
+	margin: 0;
+	font-family: 'Roboto Slab', serif;
+	text-transform: none;
+}
+
+.strong {
+	font-weight: 700;
+}
+
+.hero-content section {
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.125rem;
+}
+
+.socialmedia ul {
+	list-style: none;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-bottom: 50px;
+}
+
+.socialmedia li {
+	margin-top: 35px;
+	position: relative;
+}
+
+.socialmedia li::before {
+	border: 1px solid $borderBg;
+	position: absolute;
+	content: "";
+	width: 100%;
+	height:100%;
+	left: -2px;
+	top: -2px;
+	z-index: 1;
+}
+
+ul li a {
+	text-align: center;
+	display: block;
+	color: $textColor;
+}
+
+.socialmedia a {
+	border: 1px solid $borderBg;
+	padding: 7px 9px;
+	position: relative;
+	z-index: 2;
+}
+
+.socialmedia li a:hover {
+	background-color: $windowsBgLines;
+	color: $whiteColor;
+}
+
+// HERO END
+
+.main-nav {
+	width: 100%;
+}
+
+.burger {
+	color: $textColor;
+	line-height: 30px;
+	font-size: 1.5rem;
+	cursor: pointer;
+	display: none;
+	border: none;
+	background-color: white;
+}
+
+.burger:hover {
+	color: $windowsBgLines;
+}
+
+.main-nav {
+	font-size: 2em; 
+}
+
+.main-nav ul {
+	list-style: none;
+	width: 100%;
+}
+
+.main-nav li {
+	border: 1px solid #d7d7d7;
+	width: 20%;
+	display: flex;
+}
+
+.main-nav a {
+	text-decoration: none;
+	padding: 0;
+	text-transform: uppercase;
+	width: 100%;
+	
+}
+
+.main-nav i {
+	padding-top: 64px;
+}
+
+.main-nav h3 {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	font-size: 0.875rem;
+	color: $textColor;
+	margin: 0 auto;
+	margin-top: 16px;
+}
+
+.personalphoto img {
+	border: 1px solid #d7d7d7;
+	display: block;
+}
+
+// TOP NAVIGATION END
+
+.about-me,
+.personal-info {
+	width: calc(50% - 15px);
+}
+
+.flex-container-justify {
+	justify-content: space-between;
+}
+
+.flex-container-wrap {
+	flex-wrap: wrap;
+}
+
+.main_block h2,
+.last_block h2 {
+	font-family: 'Roboto Slab', serif;
+	font-size: 1.875rem;
+	font-weight: 700;
+	color: $textColor;
+	text-transform: uppercase;
+	text-align: center;
+	padding-top: 67px;
+	padding-bottom: 37px;
+	margin: 0;
+}
+
+.about-me p {
+	font-family: $mainFont;
+	font-size: 0.875rem;
+	color: $textColor;
+	font-weight: 300;
+	line-height: 1.7857;
+	margin: 0;
+}
+
+.category li {
+	font-family: $mainFont;
+	font-size: 0.875rem;
+	font-weight: 700;
+	line-height: 1.7142;
+	color: $textColor;
+}
+
+.data li {
+	font-family: $mainFont;
+	font-size: 0.875rem;
+	font-weight: 300;
+	line-height: 1.7142;
+	color: $textColor;
+}
+
+.category,
+.data {
+	margin-right: 45px;
+	list-style: none;
+}
+
+.instagram-gallery h2 {
+	text-align: center;
+	margin: 55px 0 0 0;
+	font-family: 'Roboto Slab', serif;
+	font-size: 1.5rem;
+	font-weight: 700;
+	color: $textColor;
+	text-transform: uppercase;
+}
+
+.gallery ul {
+	list-style: none;
+	padding-bottom: 78px;
+}
+
+.about-me h2,
+.personal-info h2 {
+	margin-top: 76px;
+	margin-bottom: 11px;
+	font-family: 'Roboto Slab', serif;
+	font-size: 1.875rem;
+	font-weight: 700;
+	color: $textColor;
+	text-transform: uppercase;
+}
+
+.personal-info h2::after,
+.about-me h2::after {
+	content: "";
+	display: block;
+	width: 19px;
+	border-top: 5px solid $windowsBgLines;
+	margin: 15px 0;
+}
+
+.instagram-gallery h2::after {
+	content: "";
+	display: block;
+	width: 19px;
+	border-top: 5px solid $windowsBgLines;
+	margin: 0 auto 39px;
+	margin-top: 6px;
+}
+
+.gallery li {
+	cursor: pointer;
+}
+
+.instagram-gallery {
+	width: 100%;
+
+}
+
+.gallery img {
+	display: block;
+	width: 100%;
+}
+
+
+// FIRST BLOCK END
+
+
+.main_block,
+.latest-news-block {
+	background-color: $divBgColor;
+}
+
+.themengraph {
+	width: calc(50% - 14px);
+	margin-bottom: 29px;
+	position: relative;
+}
+
+.themengraph::before {
+	border: 1px solid $borderBg;
+	position: absolute;
+	content: "";
+	width: 100%;
+	height:100%;
+	left: -6px;
+	top: -6px;
+	background-color: $whiteColor;
+}
+
+.themengraph div {
+	border: 1px solid $borderBg;
+	background-color: $whiteColor;
+	position: relative;
+	z-index: 1;
+	padding-bottom: 11px;
+}
+
+
+.main_block h2 {
+	text-align: center;
+	padding: 71px 0 31px;
+	margin: 0;
+}
+
+.main_block h2::after {
+	content: "";
+	display: block;
+	width: 19px;
+	border-top: 5px solid $windowsBgLines;
+	margin: auto;
+}
+
+.main_block p,
+.news p {
+	font-family: $mainFont;
+	font-size: 0.875rem;
+	font-weight: 300;
+	line-height: 1.714;
+	color: $textColor;
+	margin: 14px 13px 7px 34px;
+}
+
+
+h3 {
+	font-family: 'Roboto Slab', serif;
+	font-size: 1.125rem;
+	font-weight: 700;
+	line-height: 1.55;
+	color: $textColor;
+	text-transform: uppercase;
+	margin: 30px 13px 0 34px;
+}
+
+.dateparagraph {
+	font-family: $mainFont;
+	font-style: italic;
+	font-size: 0.75rem;
+	font-weight: 300;
+	line-height: 2;
+	color: $textColor;
+	margin: 9px 0 0 34px;
+}
+
+
+//  MY SKILL BLOCK 
+
+
+.skill h2 {
+	padding-top: 26px;
+}
+
+.last_block h2::after,
+.servicename h2::after,
+.skill h2::after {
+	content: "";
+	display: block;
+	width: 19px;
+	border-top: 5px solid $windowsBgLines;
+	margin: auto;
+	margin-top: 16px;
+}
+
+h4 {
+	font-family: $mainFont;
+	font-size: 0.875rem;
+	color: $textColor;
+	font-weight: 700;
+	margin: 0;
+	text-transform: uppercase;
+}
+
+.mainskill h3 {
+	margin: 0;
+	padding: 9px 0 31px;
+}
+
+.mainskill {
+	width: calc(50% - 17px);
+}
+
+.whitebox {
+	width: 100%;
+	border: 1px solid $borderBg;
+	margin: 10px 0 16px;
+	padding: 8px 9px 7px 13px;
+	background-color: white;
+	position: relative;
+	z-index: 1; 
+}
+
+.percentline {
+	width: 100%;
+	background-color: $percentLineInside;
+	height: 3px;
+}
+
+.percentlineInside {
+	width: 90%;
+	background-color: $windowsBgLines;
+	height: 3px;
+}
+
+
+//  MY SERVICE BLOCK
+
+
+.iconbox a {
+	border: 1px solid $borderBg;
+	padding: 25px 25px 20px;
+	color: $windowsBgLines;
+	position: relative;
+	background-color: $whiteColor;
+}
+
+.iconbox a:hover {
+	background-color: $windowsBgLines;
+	color: $whiteColor;
+}
+
+.iconbox p {
+	margin: 0;
+}
+
+.iconbox {
+	font-size: 2em; 
+}
+
+.service h3 {
+	padding-top: 39px;
+	margin: 30px 0 0;
+}
+
+.service p {
+	margin: 14px 0 0;
+}
+
+.service {
+	width: calc(33.3333% - 36px);
+	margin-top: 59px;
+	margin-bottom: 73px;
+	text-align: center;
+}
+
+
+///SECOND BLOCK END
+
+
+.last_block p {
+	line-height: 0.857;
+	margin: 0;
+}
+
+.myBtnContainer {
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 28px;
+	padding-left: 49px;
+}
+
+ .button {
+	display: block;
+	margin-right: 23px;
+	padding: 5px 10px;
+	background-color: $whiteColor;
+	border: 1px solid $borderBg;
+	text-transform: capitalize;
+	font-family: $mainFont;
+	font-size: 0.875rem;
+	color: #000000;
+	font-weight: 300;
+	line-height: 0.857;
+	cursor: pointer;
+	position: relative;
+	z-index: 2;
+}
+
+.portfolio-photo div {
+	width: calc(25% - 22px);
+	margin: 0 29px 30px 0;
+}
+
+.portfolio-photo div:nth-child(4n+4) {
+	margin-right: 0;
+}
+
+
+.portfolio-photo {
+	margin-bottom: 39px;
+}
+
+.portfolio-photo img {
+	width: 100%;
+}
+
+.hide {
+	display: none; 
+}
+
+
+// THIRD BLOCK END
+
+
+.news {
+	width: calc(50% - 30px);
+	padding-bottom: 80px;
+}
+
+.news .button {
+	padding: 5px 19px;
+}
+
+.news h3 {
+	margin: 5px 0 0;
+}
+
+.news h3::after {
+	content: "";
+	display: block;
+	width: 49px;
+	border-top: 5px solid $windowsBgLines;
+	margin-top: 6px;
+}
+
+.news img {
+	width: 100%;
+}
+
+.news p {
+	margin: 30px 0 21px;
+	line-height: 1.714;
+	text-align: left;
+}
+
+.news a {
+	color: $textColor;
+	text-decoration: none;
+	padding: 5px 10px;
+	background-color: $whiteColor;
+	border: 1px solid $borderBg;
+	font-family: $mainFont;
+	font-size: 0.875rem;
+	color: #000000;
+	font-weight: 300;
+	line-height: 0.857;
+}
+
+.news a:hover {
+	background-color: $windowsBgLines;
+	color: $whiteColor;
+}
+
+
+// NEWS BLOCK END
+
+
+.email-form {
+	background-color: $textColor;
+}
+
+.container .map {
+	max-width: 70%;
+	margin: 0 auto;
+	background-image: url(../images/compressed/map.png);
+	background-size: cover;
+	min-height: 70vh;
+	display: block;
+}
+
+.map-container {
+	min-height: 100vh;
+	max-width: 920px;
+	margin: 0 auto;
+	padding-bottom: 73px;
+	background-image: url(../images/compressed/map.png);
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	padding: 0 100px 79px 100px;
+}
+
+.topwindows {
+	width: 100%;
+	margin-top: 30px;
+}
+
+.objects {
+	width: calc(50% - 15px);
+}
+
+.messagetext {
+	width: 100%;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.messagetext textarea {
+	padding: 13px 0 13px 16px;
+	background-color: transparent;
+	border: 1px solid #ffffff;
+	color: #ffffff;
+	width: 100%;
+	font-family: "Open Sans", sans-serif;
+	font-size: 0.875rem;
+	font-weight: 300;
+}
+	
+.email-form h2 {
+	padding: 0;
+	color: $whiteColor;
+	padding-top: 64px;
+}
+
+.email-form .button {
+	display: block;
+	padding: 17px 60px;
+	border: 1px solid $whiteColor;
+	text-transform: uppercase;
+	margin: 0 auto;
+	font-family: $mainFont;
+	font-size: 0.875rem;
+	color: #000000;
+	font-weight: 300;
+	cursor: pointer;
+}
+
+.button:hover {
+	background-color: $windowsBgLines;
+	color: $whiteColor;
+}
+
+input {
+	padding: 13px 0 13px 16px;
+	background-color: transparent;
+	border: 1px solid $whiteColor;
+	color: $whiteColor;
+	width: 100%;
+	font-family: $mainFont;
+	font-size: 0.875rem;
+	font-weight: 300;
+}
+
+::placeholder {
+	color: $whiteColor;
+}
+
+
+// FOOTER
+
+
+.footer {
+	width: 100%;
+	background-color: $footerColor;
+	padding: 30px 0 30px;
+	color: $whiteColor;
+	text-align: center;
+	font-size: 0.875rem;
+}
+
+.footertext:hover {
+	color: $windowsBgLines;
+	cursor: pointer;
+}
+
+@media all and (max-width: 1140px) {
+	.container {
+		margin-left: 15px;
+		margin-right: 15px;
+	}
+}
+
+@media all and (max-width: 900px) {
+	.container {
+		margin-left: 15px;
+		margin-right: 15px;
+	}
+
+	.portfolio-photo div {
+		width: calc(50% - 30px);
+	}
+
+	.main-nav {
+		font-size: 1.33em; 
+	}
+}
+
+@media all and (max-width: 600px) {
+	.container {
+		margin-left: 15px;
+		margin-right: 15px;
+	}
+
+	.hero-content h1 {
+		font-size: 3rem;
+	}
+
+	.socialmedia li {
+		margin-top: 20px;
+	}
+
+	.socialmedia ul {
+		margin-bottom: 25px;
+	}
+
+	.main-nav i {
+		padding-top: 24px;
+	}
+
+	.main-nav h3 {
+		font-size: 0.80rem;
+		margin-top: 16px;
+		margin-bottom: 16px;
+	}
+
+	.burger {
+		display: block;
+		font-size: 1.5rem;
+		position: absolute;
+		right: 10px;
+		top: 20px;
+	}
+
+	.top-nav {
+		position: relative;
+	}
+
+	.main-nav {
+		margin: 30px;
+	}
+
+	.personalphoto,
+	.main-nav {
+		display: none;
+	}
+
+	.show {
+		display: block;
+	}
+
+	.about-me h2 {
+		margin-top: 50px;
+		font-size: 1.625rem;
+		text-align: center;
+		margin-bottom: 15px;
+	}
+
+	.personal-info h2::after,
+	.about-me h2::after {
+		margin: 15px auto;
+	}
+
+	.personal-info h2 {
+		margin-bottom: 30px;
+		font-size: 1.625rem;
+		text-align: center;
+	}
+
+	.personal-data {
+		margin-left: 10px;
+	}
+
+	.main_block h2,
+	.last_block h2 {
+		font-size: 1.625rem;
+		padding-top: 50px;
+	}
+
+	.instagram-gallery h2 {
+		font-size: 1.375rem;
+	}
+
+	.gallery ul {
+		padding-bottom: 40px;
+	}
+
+	.service {
+		margin-top: 0;
+		margin-bottom: 53px;
+	}
+
+	.service h3 {
+		padding-top: 20px;
+	}
+
+	.main_block h2 {
+		padding-bottom: 41px;
+	}
+
+	.themengraph,
+	.news {
+		width: auto;
+	}
+
+	.myBtnContainer {
+		padding-left: 0;
+	}
+
+	.mainskill,
+	.objects,
+	.about-me,
+	.personal-info,
+	.service {
+		width: 100%;
+		float: none;
+	}
+
+	.portfolio-photo div {
+		width: 100%;
+	}
+
+	.mainskill-container {
+		margin-bottom: 50px;
+	}
+
+	input {
+		margin: 5px;
+	}
+}
