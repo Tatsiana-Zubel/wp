@@ -11,7 +11,6 @@
 			];  
 
 			$result = new WP_Query($args);
-			// dump($result);
 
 			if($result->have_posts()):
 				while($result->have_posts()):
@@ -29,7 +28,7 @@
 					<?php
 				endwhile;
 			endif;
-		wp_reset_postdata(); //Atstato SQL uzklausa i pradine busena
+		wp_reset_postdata();
 		?>
 	</div>
 </div>

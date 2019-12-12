@@ -2,7 +2,6 @@
 ================================================== -->   
 <?php
 $image = get_field('h_background'); 
-// dump($image);
 ?> 
 
 <section class="hero" style="background-image: url(<?php echo $image ['sizes']['1536x1536']; ?>);">

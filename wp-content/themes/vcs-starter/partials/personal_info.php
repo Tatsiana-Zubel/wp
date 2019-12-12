@@ -41,16 +41,11 @@
 				<ul class="flex-container owl-carousel">
 					<?php
 					$image = get_field('p_instagram_gallery_repeater');
-					// dump($image);
-					// $images = $image[1];
-					// $urlimage = $images['image'];
-					// dump($urlimage['url']);
 					if(have_rows('p_instagram_gallery_repeater')):
 						while(have_rows('p_instagram_gallery_repeater')):
 							the_row();
 							foreach($image as $imagevalue):
 							$imageoneitem = $imagevalue['image'];
-							// dump($imageoneitem['url']);
 								?>
 								<li>
 								<img src="<?php echo $imageoneitem['url']; ?>" alt="<?php the_title(); ?>">
